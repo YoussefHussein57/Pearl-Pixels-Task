@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontend Test App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <link
+  rel="stylesheet"
+  href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+/>
+
+</head>
+<body>
+
+  <!-- Header -->
+   <header>
+
+     <nav class="navbar navbar-expand-lg" style="background-color: #3C3969;">
+       <div class="container justify-content-around">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="Assets/Logo.png" alt="Logo" height="40">
+      </a>
+      
+      <!-- Nav links + Services dropdown -->
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item px-2">
+          <a class="nav-link text-white" id="navHome" href="#">Home</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link text-white" id="navAbout" href="#">About Us</a>
+        </li>
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link dropdown-toggle text-white"
+          href="#"
+          id="servicesDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Services
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <li><a class="dropdown-item" id="serviceTrading" href="#">Trading Solutions</a></li>
+          <li><a class="dropdown-item" id="serviceBuilding" href="#">Building and Contracting</a></li>
+          <li><a class="dropdown-item" id="serviceDigital" href="#">Digital Solutions</a></li>
+        </ul>
+      </li>
+      <li class="nav-item px-2">
+        <a class="nav-link text-white" id="navHome" href="#">Blogs</a>
+      </li>
+    </ul>
+    
+    <!-- Language switcher + Consultation button -->
+    <div class="d-flex align-items-center">
+      <select id="languageSelect" 
+      class="form-select 
+      form-select-sm 
+      me-2 
+      bg-transparent 
+      border-0 text-light 
+      shadow-none" 
+      >
+      <option value="EN" class="text-secondary">EN</option>
+      <option value="AR" class="text-secondary">AR</option>
+    </select>
+    <button id="consultBtn"
+    class="btn text-white text-nowrap"
+    style="white-space: nowrap; background-color: #39B8A6;"
+    data-bs-toggle="modal"
+    data-bs-target="#consultationModal">
+    Get Free Consultation
+  </button>
+</div>
+</div>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1"
+aria-labelledby="consultationModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="consultationModalLabel">Free Consultation</h5>
+      <button type="button" class="btn-close"
+      data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form id="consultationForm">
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Name</label>
+          <input type="text" class="form-control" id="nameInput" required>
+        </div>
+        <div class="mb-3">
+          <label for="ageInput" class="form-label">Age</label>
+          <input type="number" class="form-control" id="ageInput" required>
+        </div>
+        <div class="mb-3">
+          <label for="purposeInput" class="form-label">Purpose of Visiting</label>
+          <textarea class="form-control" id="purposeInput" rows="2" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailInput" required>
+        </div>
+        <button type="submit"
+        class="btn text-white"
+        style="background-color: #39B8A6;">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Hero Section -->
+<section
+id="heroSection"
+class="container  "
+style="max-width: 1284px; height: 800px;"
+>
+<div class="row h-100 align-items-center justify-content-center">
+  <!-- Text Column -->
+  <div class="col-md-6 text-center text-md-start">
+    <h1 class="display-4 fw-bold" style="color: #48457E;">
+      Leading the shift Toward a Sustainable Future
+    </h1>
+    <p class="lead" style="color: #48457E;">
+      We create innovative solutions that improve individual quality of life and advance societies, offering a range of services across sectors to promote sustainable development and uphold high standards.
+    </p>
+    <div class="d-flex justify-content-center justify-content-md-start">
+      <!-- Hero “Get Free Consultation” button -->
+      <button
+      class="btn border me-2 text-light"
+      style="background-color: #48457E;"
+      data-bs-toggle="modal"
+      data-bs-target="#consultationModal"
+      >
+      Get Free Consultation
+    </button>
+    
+    <!-- Filled button -->
+    <button
+    class="btn text-white"
+    style="background-color: #39B8A6;"
+    >
+    Discover Our Solutions
+  </button>
+</div>
+</div>
+<!-- Image Column -->
+<div class="col-md-6 text-center">
+  <img
+  src="Assets/Scene.gif"
+  alt="Illustration of sustainable solutions"
+  class="img-fluid"
+  />
+</div>
+</div>
+</section>
+
+</header>
+<main>
+  <!-- Main Section 1 -->
+<section id="mainSection1" style="background-color: #F6F6F6;">
+  <div class="container py-5">
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="col text-start">
+        <!-- Small title -->
+        <h6
+          class="d-inline-block px-3 py-1 rounded"
+          style="background-color: #615F80; color: #8EF0E2;"
+        >
+          Trading Solutions
+        </h6>
+        
+        <h4 class="mt-3" style="color: #3C3969;">
+          Your trusted source for specialized business solutions
+        </h4>
+        
+        <p class="mt-2" style="color: #3C3969;">
+          Tawridat offers comprehensive commercial solutions to meet your unique needs and empower your business. Our extensive network of suppliers, manufacturers, and partners spans continents, ensuring you have access to the finest products and services worldwide.
+        </p>
+      </div>
+    </div>
+    
+    
+<div class="row mt-4">
+  <!-- Box 1 -->
+  <div class="col-md-6 mb-4">
+    <div class="p-4 feature-box" style="background-color: #615F80;">
+      <div class="d-flex align-items-start">
+        <div class="icon-wrapper">
+          <img src="Assets/icons/solar_medical-kit-linear (1).png" alt="Icon 1">
+        </div>
+        <div class="ms-3">
+          <h4 style="color: #8EF0E2;">Supply of medical equipment</h4>
+          <p class="text-white mb-2">
+            Tawridat recognizes the critical importance of technology in enhancing modern healthcare, so we offer a comprehensive range of the latest medical tools and equipment, and essential, life-saving medications. Through our unwavering...
+          </p>
+          <a href="#" class="text-white text-decoration-none">
+            Read more &raquo;&raquo;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box 2 -->
+  <div class="col-md-6 mb-4">
+    <div class="p-4 feature-box" style="background-color: #615F80;">
+      <div class="d-flex align-items-start">
+        <div class="icon-wrapper">
+          <img src="Assets/icons/hugeicons_renewable-energy.png" alt="Icon 2">
+        </div>
+        <div class="ms-3">
+          <h4 style="color: #8EF0E2;">Renewable Energy</h4>
+          <p class="text-white mb-2">
+            Tawridat is your trusted partner in solar energy adoption as the world shifts toward sustainable energy sources. We offer a comprehensive range of solar energy solutions, including photovoltaic panels, inverters, batteries, battery...
+          </p>
+          <a href="#" class="text-white text-decoration-none">
+            Read more &raquo;&raquo;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box 3 -->
+  <div class="col-md-6 mb-4">
+    <div class="p-4 feature-box" style="background-color: #615F80;">
+      <div class="d-flex align-items-start">
+        <div class="icon-wrapper">
+          <img src="Assets/icons/ep_food.png" alt="Icon 3">
+        </div>
+        <div class="ms-3">
+          <h4 style="color: #8EF0E2;">Food and Beverage Industry</h4>
+          <p class="text-white mb-2">
+            We are committed to providing the highest quality food sourcing and distribution standards. Through our extensive global network and deep industry expertise, we offer a diverse range of ingredients and products specifically designed...
+          </p>
+          <a href="#" class="text-white text-decoration-none">
+            Read more &raquo;&raquo;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box 4 -->
+  <div class="col-md-6 mb-4">
+    <div class="p-4 feature-box" style="background-color: #615F80;">
+      <div class="d-flex align-items-start">
+        <div class="icon-wrapper">
+          <img src="Assets/icons/qlementine-icons_education-16.png" alt="Icon 4">
+        </div>
+        <div class="ms-3">
+          <h4 style="color: #8EF0E2;">Equipping educational institutions</h4>
+          <p class="text-white mb-2">
+            Education is the cornerstone of a prosperous future. We're committed to providing educational institutions with the best equipment and supplies. We offer comprehensive solutions that help create inspiring learning environments...
+          </p>
+          <a href="#" class="text-white text-decoration-none">
+            Read more &raquo;&raquo;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box 5 -->
+  <div class="col-md-6 mb-4">
+    <div class="p-4 feature-box" style="background-color: #615F80;">
+      <div class="d-flex align-items-start">
+        <div class="icon-wrapper">
+          <img src="Assets/icons/Group.png" alt="Icon 5">
+        </div>
+        <div class="ms-3">
+          <h4 style="color: #8EF0E2;">Innovative Clean Water Solutions</h4>
+          <p class="text-white mb-2">
+            Clean water is essential to health. Therefore, Tawridat is committed to providing innovative solutions that meet the needs of communities and industries by offering a range of filtration systems, purification equipment, and sanitation...
+          </p>
+          <a href="#" class="text-white text-decoration-none">
+            Read more &raquo;&raquo;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box 6 -->
+  <div class="col-md-6 mb-4">
+    <div class="p-4 feature-box" style="background-color: #615F80;">
+      <div class="d-flex align-items-start">
+        <div class="icon-wrapper">
+          <img src="Assets/icons/icon-park-outline_clothes-hoodie.png" alt="Icon 6">
+        </div>
+        <div class="ms-3">
+          <h4 style="color: #8EF0E2;">Fashion and Accessories</h4>
+          <p class="text-white mb-2">
+            We offer a wide range of clothing and accessories to meet the needs of individuals and businesses alike. We work with trusted manufacturers and suppliers worldwide to provide high-quality apparel, footwear, and accessories...
+          </p>
+          <a href="#" class="text-white text-decoration-none">
+            Read more &raquo;&raquo;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="bg-white">
+  <div class="container py-5">
+    <!-- Row 1: label + heading + paragraph -->
+    <div class="row">
+      <div class="col text-center ">
+        <h6
+          class="d-inline-block px-3 py-1 rounded"
+          style="background-color: #615F80; color: #8EF0E2;"
+        >
+          Testimonials
+        </h6>
+        <h4 class="mt-3" style="color: #3C3969;">
+          Customer Testimonials – See How Our Clients Perceive Us!
+        </h4>
+        <p class="mt-2" style="color: #3C3969;">
+At Tawridat, we pride ourselves on providing solutions that enable businesses to achieve unparalleled success. But don't just take our word for it—read what our valued customers say about their experiences.         </p>
+      </div>
+    </div>
+
+    <!-- Row 2: cards -->
+    <div class="row mt-4">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 profile-card">
+          <p class="mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aspernatur corporis eius delectus velit illum tenetur eum iste sequi voluptatem, ipsum odit voluptas a rerum veritatis rem itaque unde autem!
+          </p>
+          <div class="d-flex align-items-center">
+            <div class="avatar-wrapper"></div>
+            <div class="ms-3">
+              <h5 class="mb-0">Ashraf Fahmy</h5>
+              <small class="text-muted">Lorem ipsum</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 profile-card">
+          <p class="mb-4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat molestiae repellat, officia magni error nesciunt, nobis corporis nostrum sed non iure 
+            laborum perferendis aspernatur qui excepturi facilis nihil assumenda voluptas!
+          </p>
+          <div class="d-flex align-items-center">
+            <div class="avatar-wrapper"></div>
+            <div class="ms-3">
+              <h5 class="mb-0">Mohamed Mansor</h5>
+              <small class="text-muted">Lorem ipsum</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 profile-card">
+          <p class="mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repudiandae eaque mollitia aspernatur rem, aut nostrum debitis 
+            quaerat laborum nobis dolorem minima illo consectetur ex, inventore eligendi distinctio. Tenetur, numquam.
+          </p>
+          <div class="d-flex align-items-center">
+            <div class="avatar-wrapper"></div>
+            <div class="ms-3">
+              <h5 class="mb-0">Khaled Abdelfatah</h5>
+              <small class="text-muted">Lorem ipsum</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Digital Solutions Section -->
+<section
+  id="digitalSolutions"
+  class="py-5"
+  style="background-color: #3C3969;"
+>
+  <div class="container">
+    <!-- Row 1: label + heading + paragraph (centered) -->
+    <div class="row">
+      <div class="col text-center">
+        <h6
+          class="d-inline-block px-3 py-1 rounded"
+          style="background-color: #615F80; color: #8EF0E2;"
+        >
+          Digital Solutions
+        </h6>
+        <h4 class="mt-3 text-white">
+          Global Trade and Digital Expertise Under One Roof
+        </h4>
+        <p class="mt-2 text-white">
+          Continuous progress is the key to success in today's fast-paced digital world. Tawridat empowers your digital transformation with innovative solutions that streamline operations, enhance customer experiences, and drive growth. No matter your industry or the challenges you face, our team of experienced developers and designers is dedicated to providing customized digital solutions that meet your unique needs. Join us to achieve leadership in the global digital market through the following services:
+        </p>
+      </div>
+    </div>
+
+    <!-- Row 2: three columns of cards -->
+    <div class="row mt-4 align-items-stretch">
+      <!-- Column 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 ds-card h-100" style="background-color: #615F80; border-radius: .5rem;">
+          <h5 style="color: #8EF0E2;">Website Design and Development</h5>
+          <p class="text-white">
+Website Design and Development, We create easy-to-use websites and We create user-friendly and visually 
+appealing websites to showcase your brand and engage your audience effectively.           </p>
+          <img
+            src="Assets/web.png"
+            alt="Service 1"
+            class="img-fluid mt-3"
+          >
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 ds-card h-100" style="background-color: #615F80; border-radius: .5rem;">
+          <h5 style="color: #8EF0E2;">Digital Marketing Services</h5>
+          <p class="text-white">
+We develop and implement comprehensive digital marketing strategies that increase your 
+website traffic, generate leads, and boost conversions.           </p>
+          <img
+            src="Assets/Digital-Marketing.png"
+            alt="Service 2"
+            class="img-fluid mt-3"
+          >
+        </div>
+      </div>
+
+      <!-- Column 3: two stacked text-only cards -->
+      <div class="col-md-4 mb-4">
+        <div class="row g-3 flex-fill align-items-stretch">
+          <!-- Row 3A -->
+          <div class="col-12">
+            <div class="p-4 ds-card " style="background-color: #615F80; height: 250px;  border-radius: .5rem;">
+              <h5 style="color: #8EF0E2;">ERP implementation & integration</h5>
+              <p class="text-white">
+We help you select, implement and integrate ERP systems to centralize your data and improve your operations.               </p>
+            </div>
+          </div>
+          <!-- Row 3B -->
+          <div class="col-12">
+            <div class="p-4 ds-card  " style="background-color: #615F80; height: 250px;  border-radius: .5rem;">
+              <h5 style="color: #8EF0E2;">Custom Software Development</h5>
+              <p class="text-white">
+We create custom software applications that automate processes, streamline workflows, and improve efficiency.              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Third Section -->
+<section id="thirdSection" class="py-5">
+  <div class="container">
+    <!-- Row 1: label + heading + paragraph, left-aligned -->
+    <div class="row">
+      <div class="col text-start">
+        <h4 class="mt-3" style="color: #3C3969;">Blogs</h4>
+        <p class="mt-2" style="color: #3C3969;">
+We offer rich and diverse content aimed at educating and informing readers about the latest developments and trends in the fields of procurement, 
+logistics, customs clearance, and digital technology. Through in-depth articles and specialized analyses, Tawridat seeks to share its expertise and knowledge to enhance readers' understanding and provide them with best practices and strategies for improving supply chains and reducing costs.         </p>
+      </div>
+    </div>
+
+    <!-- Row 2: three cards -->
+<div class="row mt-4">
+  <!-- Card 1 -->
+  <div class="col-md-4 mb-4">
+    <div class="blog-card h-100">
+      <div class="img-wrapper">
+        <img src="Assets/1.png" alt="Blog 1">
+      </div>
+      <div class="ts-text-block " >
+        <div class="ts-meta">
+          <h6 class="ts-label mb-0 px-3 py-1 rounded"  style="background-color: #615F80; color: #8EF0E2;">Trading Solutions</h6>
+          <span>June 1, 2025</span>
+        </div>
+        <p class="mb-0">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-md-4 mb-4">
+    <div class="blog-card h-100">
+      <div class="img-wrapper">
+        <img src="Assets/2.png" alt="Blog 2">
+      </div>
+      <div class="ts-text-block">
+        <div class="ts-meta">
+          <h6 class="ts-label mb-0 px-3 py-1 rounded"  style="background-color: #615F80; color: #8EF0E2;">Trading Solutions</h6>
+          <span>June 1, 2025</span>
+        </div>
+        <p class="mb-0">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="blog-card h-100">
+      <div class="img-wrapper">
+        <img src="Assets/1.png" alt="Blog 3">
+      </div>
+      <div class="ts-text-block">
+        <div class="ts-meta">
+          <h6 class="ts-label mb-0 px-3 py-1 rounded"  style="background-color: #615F80; color: #8EF0E2;">Trading Solutions</h6>
+          <span>June 1, 2025</span>
+        </div>
+        <p class="mb-0">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-4">
+  <button class="btn view-all-btn">
+    View All Blogs
+  </button>
+</div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container py-5">
+    <!-- Top row: nav on left, logo on right -->
+    <d  iv class="d-flex justify-content-between align-items-center">
+      <ul class="nav footer-nav mb-0">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+
+      </ul>
+      <img src="Assets/Logo.png" alt="Logo" height="40">
+    </d>
+
+    <!-- Social icons -->
+    <div class="social-icons d-flex gap-3 mt-3 mx-3">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-x-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+
+    <!-- Accent line -->
+    <div class="accent-line"></div>
+
+    <!-- Credit line -->
+    <p class="text-center mb-0">
+      © 2025 All Rights Reserved
+    </p>
+  </div>
+</footer>
+
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

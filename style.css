@@ -1,0 +1,115 @@
+
+  /* Round corners + hover effect on each feature box */
+  #mainSection1 .feature-box {
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+  }
+  #mainSection1 .feature-box:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  /* Larger circular bg behind each icon */
+  #mainSection1 .icon-wrapper {
+    background-color: #3C3969;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  #mainSection1 .icon-wrapper img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+
+  
+  /* Profile/Testimonial cards */
+  #testimonials .profile-card {
+    background-color: #F8F8F8;
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+  }
+  #testimonials .profile-card:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  /* Avatar placeholder */
+  #testimonials .avatar-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+   #digitalSolutions .ds-card {
+    border-radius: .5rem;
+    transition: transform .3s;
+    background-color: #615F80;
+  }
+  #digitalSolutions .ds-card:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  
+  #thirdSection .blog-card {
+    border: 1px solid #3C3969;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: #fff;
+  }
+  #thirdSection .blog-card:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  #thirdSection .blog-card .ts-text-block {
+    padding: 1rem;
+  }
+  #thirdSection .blog-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+    #thirdSection .blog-card .img-wrapper {
+    padding: 0.75rem;
+  }
+
+    #thirdSection .blog-card .ts-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+#thirdSection .view-all-btn {
+  background-color: #48457E;
+  color: #fff;
+  width: 136px;
+  height: 48px;
+  border-radius: 5px;
+  line-height: 48px;       
+  padding: 0;              
+}
+  /* Footer base */
+  #footer {
+    background-color: #3C3969;
+    color: #fff;
+  }
+  /* Nav links in footer */
+  #footer .footer-nav .nav-link {
+    color: #fff;
+    padding: 0 0.75rem;
+  }
+  /* Social icons spacing */
+  #footer .social-icons a {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+  /* Accent line */
+  #footer .accent-line {
+    border-top: 1px solid #39B8A6;
+    margin: 1.5rem 0;
+  }
